@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>全球算力价格地图 · GPU Price Map</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>全球算力价格地图</h1>
+    <p class="sub">实时追踪 · H100 / H200 / A100 / GB200 等</p>
+    <div id="last-updated"></div>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h2>价格分布（中位数）</h2>
+        <canvas id="medianChart"></canvas>
+      </div>
+      <div class="card">
+        <h2>最低/最高价</h2>
+        <canvas id="rangeChart"></canvas>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>实时价格表</h2>
+      <div class="table-controls">
+        <input id="search" placeholder="搜索 provider / 区域 / GPU / 实例类型..." />
+        <select id="gpuFilter">
+          <option value="">全部GPU</option>
+        </select>
+        <select id="pricingFilter">
+          <option value="">全部定价</option>
+          <option>on-demand</option>
+          <option>spot</option>
+          <option>reserved</option>
+          <option>dedicated</option>
+          <option>private-deal</option>
+        </select>
+      </div>
+      <table id="priceTable">
+        <thead>
+          <tr>
+            <th>日期</th>
+            <th>Provider</th>
+            <th>区域</th>
+            <th>GPU</th>
+            <th>定价</th>
+            <th>实例类型</th>
+            <th>数量</th>
+            <th>价格(USD/小时)</th>
+            <th>带宽</th>
+            <th>条款</th>
+            <th>来源</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p class="disclaimer">
+        * 声明：数据来源于公开渠道与供稿，可能存在延迟或偏差；请以供应商实际报价为准。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> GPU Price Map — Maintained by <a href="#" target="_blank" rel="noopener">Your Team</a></p>
+  </footer>
+</body>
+</html>
