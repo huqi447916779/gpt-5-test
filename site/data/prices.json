@@ -1,0 +1,44 @@
+[
+  {
+    "date_observed": "2025-08-08",
+    "provider": "EXAMPLE Cloud",
+    "region": "us-west-1",
+    "gpu_model": "H100",
+    "pricing_type": "on-demand",
+    "price_usd_per_hr": 2.9,
+    "quantity_gpus": 1,
+    "instance_type": "example.h100.1x",
+    "bandwidth_notes": "Included 25Gbps",
+    "commitment_terms": "None",
+    "source_url": "https://example.com/pricing",
+    "notes": "placeholder"
+  },
+  {
+    "date_observed": "2025-08-08",
+    "provider": "EXAMPLE Cloud",
+    "region": "tokyo",
+    "gpu_model": "H100",
+    "pricing_type": "on-demand",
+    "price_usd_per_hr": 3.6,
+    "quantity_gpus": 1,
+    "instance_type": "example.h100.1x",
+    "bandwidth_notes": "",
+    "commitment_terms": "",
+    "source_url": "https://example.com/pricing",
+    "notes": "placeholder"
+  },
+  {
+    "date_observed": "2025-08-08",
+    "provider": "EXAMPLE Colocation",
+    "region": "cn-north",
+    "gpu_model": "H100",
+    "pricing_type": "private-deal",
+    "price_usd_per_hr": 1.2,
+    "quantity_gpus": 1,
+    "instance_type": "colo.h100.1x",
+    "bandwidth_notes": "Customer-provided",
+    "commitment_terms": "3-month minimum",
+    "source_url": "https://example.com/private",
+    "notes": "placeholder"
+  }
+]
